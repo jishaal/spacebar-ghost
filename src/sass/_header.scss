@@ -1,0 +1,28 @@
+.main-header {
+    @include outer-container;
+
+}
+
+.main-header__left {
+    @include media($medium)  {
+        @include span-columns(6);
+    }
+}
+
+.main-header__right {
+    @include media($medium)  {
+        @include span-columns(6);
+    }
+}
+
+.header-title {
+
+}
+
+.header-title--small {
+    font-size: modular-scale(-1);
+}
+
+.spacebar-top {
+    background: $secondary-background-color;
+}
