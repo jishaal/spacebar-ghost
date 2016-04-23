@@ -10,3 +10,16 @@ body {
 *::after {
   box-sizing: inherit;
 }
+
+.site-wrapper {
+    @include outer-container;
+}
+
+.content-home {
+    @include media($medium)  {
+        @include span-columns(5);
+        margin-top: 0;
+    }
+
+    border-right: $base-border;
+}

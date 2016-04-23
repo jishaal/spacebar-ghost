@@ -11,7 +11,7 @@ gulp.task('sass', function () {
         }))
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./assets/css'))
-        .pipe(livereload());;
+        .pipe(livereload());
 });
 
 gulp.task('sass:watch', function () {
@@ -19,4 +19,4 @@ gulp.task('sass:watch', function () {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass:watch']);
+gulp.task('default', ['sass', 'sass:watch']);

@@ -1,0 +1,10 @@
+.post {
+    padding: $small-spacing;
+    border-bottom: $base-border;
+
+    &:hover {
+        background-color: $secondary-background-color;
+    }
+}
+
+

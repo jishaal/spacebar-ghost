@@ -15,10 +15,22 @@ h6 {
   font-size: modular-scale(1);
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+    .wf-loading & {
+        visibility: hidden;
+    }
+    .wf-active &, .wf-inactive & {
+        visibility: visible;
+    }
 }
 
 p {
   margin: 0 0 $small-spacing;
+    .wf-loading & {
+        visibility: hidden;
+    }
+    .wf-active &, .wf-inactive & {
+        visibility: visible;
+    }
 }
 
 a {
@@ -31,6 +43,12 @@ a {
   &:hover {
     color: shade($action-color, 25%);
   }
+    .wf-loading & {
+        visibility: hidden;
+    }
+    .wf-active &, .wf-inactive & {
+        visibility: visible;
+    }
 }
 
 hr {
@@ -40,3 +58,5 @@ hr {
   border-top: 0;
   margin: $base-spacing 0;
 }
+
+

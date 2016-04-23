@@ -1,28 +1,45 @@
 .main-header {
     @include outer-container;
+    padding: $small-spacing;
 
 }
 
 .main-header__left {
+    text-align: center;
     @include media($medium)  {
         @include span-columns(6);
+    }
+
+    h1 {
+        margin-bottom:0;
     }
 }
 
 .main-header__right {
+    text-align: center;
+    margin-top: $small-spacing /2;
     @include media($medium)  {
         @include span-columns(6);
+        margin-top: 0;
     }
 }
 
 .header-title {
-
+    font-weight: $font-medium;
 }
 
 .header-title--small {
     font-size: modular-scale(-1);
+    font-weight: $font-thin;
 }
 
 .spacebar-top {
     background: $secondary-background-color;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
+
+.spacebar-top__inner {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+

@@ -1,7 +1,13 @@
 .nav {
-
+    margin-top: em(2);
 }
 
 .nav__item {
     display: inline-block;
+    font-weight: $font-medium;
+}
+
+.nav__item__link {
+    display: block;
+    padding: 0 $small-spacing;
 }
