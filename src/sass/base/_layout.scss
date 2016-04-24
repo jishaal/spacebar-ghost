@@ -15,11 +15,31 @@ body {
     @include outer-container;
 }
 
-.content-home {
+/*Homepage*/
+.content-home-posts {
     @include media($medium)  {
-        @include span-columns(5);
+        @include span-columns(6);
+        @include omega();
         margin-top: 0;
     }
 
-    border-right: $base-border;
+    border-left: $base-border;
 }
+
+.content-home-profile {
+    @include media($medium)  {
+        @include span-columns(6);
+        margin-top: 0;
+    }
+}
+
+/*Footer*/
+.spacebar-footer {
+    border-top: $base-border;
+}
+
+.spacebar-footer__inner {
+    @include outer-container;
+    padding: $small-spacing $med-spacing;
+}
+

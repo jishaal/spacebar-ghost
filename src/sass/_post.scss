@@ -1,16 +1,77 @@
-.post {
-    padding: $small-spacing;
+/*Post List*/
+
+.post-list {
+    padding: $base-spacing $med-spacing;
     border-bottom: $base-border;
 
     &:hover {
         background-color: $secondary-background-color;
     }
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
-.post-title {
-
+.post-list__title {
+    font-size: modular-scale(2);
+    margin-bottom: modular-scale(-5);
 }
 
-.post-excerpt {
+.post-list__excerpt {
     color: $base-font-color;
 }
+.post-list__image-cover {
+    margin-bottom: $base-spacing;
+}
+
+.post-list__image {
+    border-radius: 2px;
+    display: block;
+}
+
+/*Post Single*/
+.post-single {
+    @include outer-container(70%);
+    padding: $base-spacing 0;
+
+}
+.post-single__title {
+    font-size: modular-scale(2);
+    margin-bottom: 0;
+}
+
+.post-single p {
+    font-size: modular-scale(1);
+}
+
+/*Tags*/
+
+.tags {
+    list-style: none;
+    margin: $small-spacing 0 $base-spacing;
+    overflow: hidden;
+    padding: 0;
+}
+
+.tags li {
+    float: left;
+}
+
+.tag {
+    background: $lighter-gray;
+    font-size: modular-scale(-1);
+    border-radius: 3px;
+    display: inline-block;
+    height: modular-scale(2);
+    line-height: modular-scale(2);
+    padding: 0 $small-spacing;
+    margin: 0 $small-spacing $small-spacing 0;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $action-color;
+        color: white;
+    }
+}
+

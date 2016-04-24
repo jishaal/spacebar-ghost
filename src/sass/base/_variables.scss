@@ -21,7 +21,7 @@ $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 1.1em;
 
 $font-thin: 300;
 $font-regular: 400;
@@ -36,6 +36,7 @@ $heading-line-height: 1.2;
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
+$med-spacing: $base-spacing / 1.5;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
@@ -44,11 +45,13 @@ $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$lighter-gray: #eee;
 $red: #e75930;
 
 // Font Colors
 $base-font-color: $blue-grey500;
-$action-color: $red300;
+$action-color: $red;
+
 
 // Border
 $base-border-color: $light-gray;

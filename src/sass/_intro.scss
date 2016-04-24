@@ -1,0 +1,12 @@
+.intro {
+    padding: $base-spacing $med-spacing;
+}
+
+.intro__title {
+    font-size: modular-scale(2);
+}
+
+.intro__subtitle {
+    font-size: modular-scale(1);
+    font-weight: $font-regular;
+}

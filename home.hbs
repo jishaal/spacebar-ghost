@@ -2,9 +2,24 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The main content area on the homepage }}
-<main id="content" class="content-home" role="main">
+<main id="content" class="content-home-profile" role="main">
+    <div class="intro">
+        <h2 class="intro__title">Hello, I'm Jishaal</h2>
+        <h3 class="intro__subtitle">
+            I <a href="https://twitter.com/hashtag/dobeautifulwork">#dobeautifulwork</a>
+            at <a href="https://www.xero.com">Xero</a>, makers of award-winning accounting software for the cloud.</h3>
+        <p class="intro__description">My passion lies in the delivery of software and how to develop scalable frontend applications
+            for the modern web. My current flavour of framework is React with Redux.
+        </p>
+    </div>
+
+</main>
+
+
+<aside id="content" class="content-home-posts" role="main">
 
     {{! The tag below includes the post loop - partials/loop.hbs }}
     {{> "loop"}}
 
-</main>
+</aside>
+

@@ -4,10 +4,10 @@
 
 .nav__item {
     display: inline-block;
-    font-weight: $font-medium;
+    font-weight: $font-bold;
 }
 
 .nav__item__link {
     display: block;
-    padding: 0 $small-spacing;
+    padding: 0 $med-spacing;
 }

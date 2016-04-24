@@ -1,6 +1,6 @@
 .main-header {
     @include outer-container;
-    padding: $small-spacing;
+    padding: $small-spacing $med-spacing;
 
 }
 
@@ -8,6 +8,7 @@
     text-align: center;
     @include media($medium)  {
         @include span-columns(6);
+        text-align: left;
     }
 
     h1 {
@@ -21,6 +22,7 @@
     @include media($medium)  {
         @include span-columns(6);
         margin-top: 0;
+        text-align: right;
     }
 }
 
@@ -34,7 +36,6 @@
 }
 
 .spacebar-top {
-    background: $secondary-background-color;
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
