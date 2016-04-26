@@ -2,6 +2,7 @@
     <ul>
         {{#foreach navigation}}
             <li class="nav__item {{#if current}}nav-item--current{{/if}}" role="presentation">
+                <i class="icon-{{label}} nav__item__icon"></i>
                 <a href="{{url absolute="true"}}" class="nav__item__link">{{label}}</a>
             </li>
         {{/foreach}}

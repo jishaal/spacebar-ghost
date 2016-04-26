@@ -1,13 +1,48 @@
+$base-tint: tint($base-font-color, 60);
+
 .nav {
     margin-top: em(2);
 }
 
 .nav__item {
     display: inline-block;
-    font-weight: $font-bold;
+    position: relative;
 }
 
 .nav__item__link {
     display: block;
-    padding: 0 $med-spacing;
+    position: relative;
+    z-index: 2;
+    padding: 0 $med-spacing 0 $base-spacing;
+    font-weight: $font-medium;
+    color: $base-tint;
+    font-family: $base-font-family;
+
+    &:hover {
+        color: $action-color;
+    }
 }
+
+.nav__item__icon {
+    z-index: 1;
+    color: $base-tint;
+    position: absolute;
+    left: -2px;
+    top: 4px;
+    &:hover {
+        color: $action-color;
+    }
+}
+
+
+.icon-Articles {
+    top: 6px;
+    font-size: em(15);
+}
+
+.icon-About {
+    top: 5px;
+    left: 1px;
+    font-size: em(14);
+}
+

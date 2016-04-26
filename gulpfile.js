@@ -19,4 +19,12 @@ gulp.task('sass:watch', function () {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'sass:watch']);
+gulp.task('copy', function () {
+    gulp.src('prism.js', {cwd: './src/js'})
+        .pipe(gulp.dest('./assets/js'));
+
+    gulp.src(['icomoon.eot', 'icomoon.svg', 'icomoon.ttf', 'icomoon.woff'], {cwd: './src/fonts/fonts'})
+        .pipe(gulp.dest('./assets/fonts'));
+});
+
+gulp.task('default', ['copy', 'sass', 'sass:watch']);

@@ -1,5 +1,5 @@
 // Breakpoints
-$medium: 700px;
+$medium: 768px;
 $large: 900px;
 
 // Typography
@@ -20,8 +20,13 @@ $font-stack-system: (
 $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
 
+$paragraph-font-family: (
+    "merriweather",
+    "serif"
+);
+
 // Font Sizes
-$base-font-size: 1.1em;
+$base-font-size: 1em;
 
 $font-thin: 300;
 $font-regular: 400;
@@ -38,6 +43,7 @@ $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $med-spacing: $base-spacing / 1.5;
 $small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2;
 $base-z-index: 0;
 
 // Colors
@@ -49,13 +55,14 @@ $lighter-gray: #eee;
 $red: #e75930;
 
 // Font Colors
-$base-font-color: $blue-grey500;
+$base-font-color: $blue-grey900;
 $action-color: $red;
 
 
 // Border
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
+$white-border: 1px solid $white;
 
 // Background Colors
 $base-background-color: #fff;
