@@ -3,7 +3,7 @@
 
     @include media($medium) {
         border-right: $base-border;
-        padding: 7em $med-spacing;
+        padding: 6em $med-spacing;
         @include span-columns(6);
     }
 }

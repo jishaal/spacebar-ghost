@@ -3,6 +3,7 @@
 .post-list, .post-list.no-cover {
     border-bottom: $base-border;
     background-color: $secondary-background-color;
+    transition: background-color $base-duration $base-timing;
 
     &:hover {
         background-color: tint($secondary-background-color, 60);
@@ -17,7 +18,7 @@
 
     @include media($medium) {
         @include span-columns(6);
-        @include omega(2n);
+        //g@include omega(2n);
     }
 
     &.featured {
@@ -29,6 +30,25 @@
     display: block;
     width: 100%;
     padding: $base-spacing $med-spacing;
+}
+
+.post-list__title {
+    font-size: modular-scale(2);
+    margin-top: 0;
+    margin-bottom: modular-scale(-5);
+}
+
+.post-list__excerpt {
+    color: $base-font-color;
+}
+
+.post-list__image-cover {
+    margin-bottom: $base-spacing;
+}
+
+.post-list__image {
+    border-radius: 2px;
+    display: block;
 }
 
 .featured {
@@ -57,6 +77,7 @@
 
     .post-list__inner {
         position: relative;
+        margin-bottom: 3.5em;
         @include media($medium) {
             @include span-columns(6);
             @include shift(3);
@@ -70,10 +91,10 @@
     .post-list-link {
         position: relative;
         z-index: 2;
-        padding: $large-spacing $large-spacing $large-spacing + 1em;
+        padding: $large-spacing $large-spacing $large-spacing;
 
         @include media($medium) {
-            padding: 10em 5em;
+            padding: 8em 5em;
         }
     }
 
@@ -109,7 +130,8 @@
         }
 
         .post-list__title {
-            color: $action-color
+            color: $action-color;
+            transition: color $base-duration $base-timing;
         }
 
         .post-list__excerpt {
@@ -120,30 +142,16 @@
             color: rgba(0,0,0,0.5);
             border-color: rgba(0,0,0,0.2);
         }
+
+        &:hover {
+            .post-list__title {
+                color: tint($action-color, 20%);
+            }
+        }
     }
 }
 
 
-
-
-.post-list__title {
-    font-size: modular-scale(2);
-    margin-top: 0;
-    margin-bottom: modular-scale(-5);
-}
-
-.post-list__excerpt {
-    color: $base-font-color;
-}
-
-.post-list__image-cover {
-    margin-bottom: $base-spacing;
-}
-
-.post-list__image {
-    border-radius: 2px;
-    display: block;
-}
 
 /*Post Single*/
 .post-single {

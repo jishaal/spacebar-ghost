@@ -20,6 +20,8 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
     <script>document.documentElement.className += ' wf-loading';</script>
+    <script src="https://use.typekit.net/rva4kdx.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body class="{{body_class}} nav-closed">
 
@@ -39,14 +41,13 @@
     </footer>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
-    <script src="https://use.typekit.net/rva4kdx.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="//npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
 
 </body>
 </html>
