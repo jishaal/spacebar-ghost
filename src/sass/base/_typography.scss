@@ -66,7 +66,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: shade($action-color, 25%);
+    color: tint($action-color, 20%);
   }
     .wf-loading & {
         visibility: hidden;

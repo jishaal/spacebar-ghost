@@ -5,31 +5,33 @@
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}} post-list">
-    <a href="{{url}}">
-        {{#if image}}
-            <div class="post-list__image-cover">
-                <img src="{{image}}" class="post-list__image" alt="">
-            </div>
-        {{/if}}
-        <header class="post-list__header">
-            <h2 class="post-list__title">{{title}}</h2>
-        </header>
-        <section class="post-list__excerpt">
-            <p>
-                {{#if meta_description}}
-                    {{meta_description}}
-                {{else}}
-                    {{excerpt words="26"}}
-                {{/if}}
-                 <span class="read-more">&raquo;</span></p>
-        </section>
-
+<article class="{{post_class}} post-list {{#if featured}}{{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}{{/if}}">
+    <a href="{{url}}" class="post-list-link clearfix">
+        <div class="post-list__inner" >
+        {{#unless featured}}
+            {{#if image}}
+                <div class="post-list__image-cover">
+                    <img src="{{image}}" class="post-list__image" alt="">
+                </div>
+            {{/if}}
+        {{/unless}}
+            <header class="post-list__header">
+                <h2 class="post-list__title">{{title}}</h2>
+            </header>
+            <section class="post-list__excerpt">
+                <p>
+                    {{#if meta_description}}
+                        {{meta_description}}
+                    {{else}}
+                        {{excerpt words="26"}}
+                    {{/if}}
+                     <span class="read-more">&raquo;</span></p>
+            </section>
+        </div>
     </a>
-
 </article>
 
 {{/foreach}}
 
 <!--{{! Previous/next page links - displayed on every page }}-->
-<!--{{pagination}}-->
+{{pagination}}

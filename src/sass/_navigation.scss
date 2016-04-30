@@ -7,6 +7,14 @@ $base-tint: tint($base-font-color, 60);
 .nav__item {
     display: inline-block;
     position: relative;
+
+    &:active,
+    &:focus,
+    &:hover {
+        .nav__item__icon, .nav__item__link {
+            color: $action-color;
+        }
+    }
 }
 
 .nav__item__link {
@@ -17,23 +25,16 @@ $base-tint: tint($base-font-color, 60);
     font-weight: $font-medium;
     color: $base-tint;
     font-family: $base-font-family;
-
-    &:hover {
-        color: $action-color;
-    }
 }
 
 .nav__item__icon {
     z-index: 1;
     color: $base-tint;
     position: absolute;
+    transition: color $base-duration $base-timing;
     left: -2px;
     top: 4px;
-    &:hover {
-        color: $action-color;
-    }
 }
-
 
 .icon-Articles {
     top: 6px;
