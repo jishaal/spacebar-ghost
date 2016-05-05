@@ -17,7 +17,7 @@ body {
 
 /*Homepage*/
 .content-home-posts {
-    @include outer-container(12);
+    @include outer-container();
     @include media($medium)  {
         //@include span-columns(6);
         //@include omega();
