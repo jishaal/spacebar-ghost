@@ -1,7 +1,10 @@
+/**
+ * MAIN HEADER THAT HOLDS THE NAV AT TOP OF PAGE]
+*/
+
 .main-header {
     @include outer-container;
     padding: $small-spacing $med-spacing;
-
 }
 
 .main-header__left {
@@ -49,4 +52,14 @@
     border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
+/**
+ * GENERAL PAGE HEADER
+*/
 
+.page-header {
+    padding: $base-spacing $med-spacing;;
+}
+
+.page-header__title  {
+    margin: 0;
+}

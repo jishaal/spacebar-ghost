@@ -1,0 +1,40 @@
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts limit="4"}}
+<article class="{{post_class}} post-item {{#if @first}}post-featured {{#if image}} post-featured--has-image" style="background-image: url({{image}}){{/if}}{{/if}}">
+    <a href="{{url}}" class="post-item-link clearfix">
+        <div class="post-item__inner" >
+        {{#unless @first}}
+            {{#if image}}
+                <div class="post-item__image-cover">
+                    <img src="{{image}}" class="post-item__image" alt="">
+                </div>
+            {{/if}}
+        {{/unless}}
+            <header class="post-item__header">
+                <h2 class="post-item__title">{{title}}</h2>
+            </header>
+            <section class="post-item__excerpt">
+                <p>
+                    {{#if meta_description}}
+                        {{meta_description}}
+                    {{else}}
+                        {{excerpt words="26"}}
+                    {{/if}}
+                     <span class="read-more">&raquo;</span></p>
+            </section>
+        </div>
+    </a>
+</article>
+
+{{#if @first}}
+    <div class="post-blocks">
+{{/if}}
+
+{{#if @last}}
+    </div>
+{{/if}}
+
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination limit="2"}}

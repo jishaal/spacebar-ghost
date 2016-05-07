@@ -6,7 +6,8 @@
     background-color: $secondary-background-color;
     transition: background-color $base-duration $base-timing;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: tint($secondary-background-color, 60);
     }
 }
@@ -14,7 +15,7 @@
 .post-item-link {
     display: block;
     width: 100%;
-    padding: $base-spacing $med-spacing;
+    padding: $base-spacing $base-spacing;
 }
 
 .post-item__title {
@@ -28,7 +29,7 @@
 }
 
 .post-item__image-cover {
-    margin-bottom: $base-spacing;
+    margin-bottom: $med-spacing;
 }
 
 .post-item__image {
@@ -47,7 +48,7 @@
     position: relative;
     overflow: hidden;
     border-top: $base-border;
-    border-bottom: $base-border;
+    //border-bottom: $base-border;
 
     .post-item__title {
         font-size: modular-scale(3);
@@ -150,7 +151,8 @@
  * - Uses flexbox to lay out in a 3 column grid
 */
 
-.more-posts {
+.post-blocks {
+
     @include media($medium) {
         @include display(flex);
         @include flex-wrap(wrap);
@@ -158,12 +160,11 @@
 
     .post-item {
         //background: $white;
-        border-bottom: $base-border;
+        border-top: $base-border;
         border-right: $base-border;
         @include media($medium) {
             width: 33.33%;
             &:last-child {
-                border-bottom: $base-border;
                 border-right: none;
             }
         }
