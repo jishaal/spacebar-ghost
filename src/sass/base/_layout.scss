@@ -19,20 +19,12 @@ body {
 .content-home-posts {
     @include outer-container();
     @include media($medium)  {
-        //@include span-columns(6);
-        //@include omega();
         margin-top: 0;
     }
-
-    //border-left: $base-border;
 }
 
 .content-home-profile {
     @include outer-container(12);
-    //@include media($medium)  {
-    //    @include span-columns(6);
-    //    margin-top: 0;
-    //}
 }
 
 /*Footer*/

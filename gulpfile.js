@@ -14,6 +14,16 @@ gulp.task('sass', function () {
         .pipe(livereload());
 });
 
+gulp.task('sass:dist', function () {
+    return gulp.src('./src/sass/**/*.scss')
+        .pipe(sass({
+            includePaths: require('node-neat').includePaths,
+            outputStyle: 'compressed'
+        }))
+        .pipe(gulp.dest('./assets/css'))
+        .pipe(livereload());
+});
+
 gulp.task('sass:watch', function () {
     livereload.listen();
     gulp.watch('./src/sass/**/*.scss', ['sass']);
@@ -28,3 +38,5 @@ gulp.task('copy', function () {
 });
 
 gulp.task('default', ['copy', 'sass', 'sass:watch']);
+gulp.task('prod', ['copy', 'sass:dist']);
+
