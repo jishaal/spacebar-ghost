@@ -47,3 +47,8 @@ $base-tint: tint($base-font-color, 60);
     font-size: em(14);
 }
 
+
+.pagination {
+    text-align: center;
+    padding: $base-spacing 0;
+}

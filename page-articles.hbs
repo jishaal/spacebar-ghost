@@ -1,0 +1,52 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{! This is the post loop - each post will be output using this markup }}
+
+<main class="content" role="main">
+    {{#post}}
+        <header class="page-header tag-head">
+            <div class="page-header__content">
+                <h2 class="page-header__title">{{title}}</h2>
+            </div>
+        </header>
+    {{/post}}
+
+
+    <div class="post-blocks">
+    {{#get "posts" include="tags,author"}}
+        {{#foreach posts}}
+            <article class="{{post_class}} post-item">
+                <a href="{{url}}" class="post-item-link clearfix">
+                    <div class="post-item__inner" >
+                        {{#unless @first}}
+                            {{#if image}}
+                                <div class="post-item__image-cover">
+                                    <img src="{{image}}" class="post-item__image" alt="">
+                                </div>
+                            {{/if}}
+                        {{/unless}}
+                        <header class="post-item__header">
+                            <h2 class="post-item__title">{{title}}</h2>
+                        </header>
+                        <section class="post-item__excerpt">
+                            <p>
+                                {{#if meta_description}}
+                                    {{meta_description}}
+                                {{else}}
+                                    {{excerpt words="26"}}
+                                {{/if}}
+                                <span class="read-more">&raquo;</span></p>
+                        </section>
+                    </div>
+                </a>
+            </article>
+        {{/foreach}}
+    {{/get}}
+    </div>
+</main>
+
+
